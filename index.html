@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+				/* *
+				 * 浮动:
+				 * left向左浮动
+				 * right向右浮动
+				 * */
+				/*float: left;*/
+				/*文字环绕效果经常用浮动来写*/
+			}
+			body{
+				background: #000;
+				width: 100%;
+				/*opacity: 0.6;*/
+			}
+			.content{
+				position: absolute;	
+    			left: 25%;
+    			top: 50%;
+    			margin-left: -100px;
+    			margin-top: -100px;
+    			display: flex;
+    			flex-direction: row;
+			}
+			.first, .second, .third{
+				margin-left: 100px;
+				text-align: center;
+			}
+			.images{
+				transition: all 0.5s linear;
+			}
+			.images:hover{
+				transform: rotate(360deg) scale(1.2);
+			}
+			.txt{				
+				width: 220px;
+				height: 40px;
+				border: 4px solid white;
+				margin: 20px auto;
+				position: relative;
+				padding-top: 10px;
+			}
+			/*左上向右*/
+			.lu{
+				background: white;
+				position: absolute;
+				width: 0px;
+				height: 4px;
+				top: -4px;
+				left: -100%;
+				transition: all 1s;
+			}
+			.txt:hover .lu{
+				width: 100%;
+				left: 0px;
+			}
+			/*右下向左*/
+			.rd{
+				background: white;
+				position: absolute;
+				width: 0px;
+				height: 4px;
+				bottom: -4px;
+				right: -100%;
+				transition: all 1s;
+			}
+			.txt:hover .rd{
+				width: 100%;
+				right: 0px;
+			}
+			/*右上向下*/
+			.ru{
+				background: white;
+				position: absolute;
+				height: 0px;
+				width: 4px;
+				right: -4px;
+				top: -100%;
+				transition: all 1s;
+			}
+			.txt:hover .ru{
+				height: 100%;
+				top: 0px;
+			}
+			/*左下向上*/
+			.ld{
+				background: white;
+				position: absolute;
+				height: 0px;
+				width: 4px;
+				left: -4px;
+				bottom: -100%;
+				transition: all 1s;
+			}
+			.txt:hover .ld{
+				height: 100%;
+				bottom: 0px;
+			}
+			.pic{
+				position: absolute;
+				left: 150px;
+				transition: all 1s;
+			}
+			.first .txt:hover .pic{
+				left:180px;
+			}
+			.second .txt:hover .pic{
+				left:180px;
+			}
+			.third .txt:hover .pic{
+				left:180px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="content">
+			<div class="first">
+				<img src="img/1.png" class="images">
+				<div class="txt">
+					<span style="color: green;font-weight: bolder;font-size: 1.2em;vertical-align: center;">MISSION&emsp;&emsp;</span>
+					<img src="img/4.png" style="width: 40px" class="pic">
+					<div class="lu"></div>
+					<div class="ru"></div>
+					<div class="ld"></div>
+					<div class="rd"></div>
+				</div>
+			</div>
+			
+			
+			<div class="second">
+				<img src="img/2.png" class="images">
+				
+				<div class="txt">
+					<span style="color: green;font-weight: bolder;font-size: 1.2em;vertical-align: center;">PLAY&emsp;&emsp;</span>
+					<span><img src="img/4.png" style="width: 40px" class="pic"></span>
+					<div class="lu"></div>
+					<div class="ru"></div>
+					<div class="ld"></div>
+					<div class="rd"></div>
+				</div>
+			</div>
+			<div class="third">
+				<img src="img/3.png" class="images">
+				<div class="txt">
+					<span style="color: green;font-weight: bolder;font-size: 1.2em;vertical-align: center;">TOUCH&emsp;&emsp;</span>
+					<span><img src="img/4.png" style="width: 40px" class="pic"></span>
+					<div class="lu"></div>
+					<div class="ru"></div>
+					<div class="ld"></div>
+					<div class="rd"></div>
+				</div>
+			</div>
+			
+		</div>
+	</body>
+	<script>
+		document.getElementById("pic")
+	</script>
+</html>
